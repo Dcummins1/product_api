@@ -4,6 +4,7 @@ from read_csv import *
 
 
 
+
 app = Flask(__name__)
 api = Api(app)
 
@@ -17,6 +18,15 @@ def api_users(id_str):
      except:
          return 'Error 404 ID not found'
 
+# @app.route('/id')
+# def one_endpoint():
+#     data = json.loads(request.body.decode('utf-8'))
+#     id = data.get("id", '0')
+#     try:
+#         json_data = bigdata.get_id(id)
+#         return json_data
+#     except:
+#         return 'Error 404 ID not found'
 
 
 if __name__ == '__main__':
